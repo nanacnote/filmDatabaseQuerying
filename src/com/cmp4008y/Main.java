@@ -5,36 +5,42 @@ public class Main {
 
     public static void main(String[] args)
     {
-        // Question 2
+        //===========HEADER==============
+        System.out.println("\n\n\u001B[45m QUESTION 2 \u001B[0m");
+        //===========HEADER==============
         new Film()
                 .sortBy("duration")
                 .printResult();
-        System.out.println("\n\n\n"); //separator
 
-        // Question 3
+        //===========HEADER==============
+        System.out.println("\n\n\u001B[45m QUESTION 3 \u001B[0m");
+        //===========HEADER==============
         new Film()
                 .sortBy("rating")
                 .filterBy("genre", "Horror")
                 .sliceResult(-1, 1)
                 .printResult();
-        System.out.println("\n\n\n"); //separator
 
-        // Question 4
+        //===========HEADER==============
+        System.out.println("\n\n\u001B[45m QUESTION 4 \u001B[0m");
+        //===========HEADER==============
         new Film()
                 .sortBy("duration")
                 .filterBy("certificate", "R")
                 .sliceResult(-15, 15)
                 .printResult();
-        System.out.println("\n\n\n");
 
-        // Question 5
+        //===========HEADER==============
+        System.out.println("\n\n\u001B[45m QUESTION 5 \u001B[0m");
+        //===========HEADER==============
         new Film()
                 .sortBy("titleLength")
                 .sliceResult(1, 1)
                 .printResult();
-        System.out.println("\n\n\n"); //separator
 
-        // Question 6
+        //===========HEADER==============
+        System.out.println("\n\n\u001B[45m QUESTION 6 \u001B[0m");
+        //===========HEADER==============
         String oldestFilmYear = new Film()
                 .sortBy("year")
                 .sliceResult(1, 1)
@@ -45,6 +51,5 @@ public class Main {
                 .getValueOf("year").get(0);
         int yearDifference = Integer.parseInt(newestFilmYear) - Integer.parseInt(oldestFilmYear);
         System.out.println(yearDifference);
-
     }
 }
