@@ -6,14 +6,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * This class reads line by line data from the film.txt found in the root folder of this project.
+ *
+ * @author [Owusu K](https://github.com/nanacnote)
+ */
 public class FilmDatabase {
 
-    // FilmDatabase attribute which returns an array with HasMap entry for each film
+    // FilmDatabase attribute
     public final ArrayList<HashMap<String, String>> filmCollection = new ArrayList<>();
 
     /**
      * Constructor method which initialises the FilmDatabase class by getting data from the film.txt file
-     * and restructuring the content into a hashMap which is assigned to the filmCollections attribute.
+     * and converting the individual film entries into a hashMap which is assigned to the filmCollections attribute.
      */
     public FilmDatabase()
     {
@@ -48,17 +53,18 @@ public class FilmDatabase {
     /**
      * Takes in a string param value and parses it to become a HasMap with standardised key identifiers
      *
-     * @param filmEntry entry of film (this string contains information on 'title', 'year of release',
-     *                  'certificate of audience suitability', 'genre', 'duration' and 'viewer rating' )
+     * @param filmEntry entry of film read in from film.txt (this string contains information on 'title',
+     *                  'year of release', 'certificate of audience suitability', 'genre', 'duration' and
+     *                  'viewer rating' )
      */
     private void filmEntryParser(String filmEntry)
     {
         // convert String to array of String
         String[] entry = filmEntry.split(",");
 
-        // if block to prevent corrupted film entries from being parsed
+        // This if block helps prevent corrupted film entries from being parsed
         // it does this by checking if the length of the entry after split
-        // is equal to 6
+        // is equal to 6 ie the sections every film entry needs to have.
         if (entry.length == 6)
         {
             // Convert String array to HashMap with standardised key values
