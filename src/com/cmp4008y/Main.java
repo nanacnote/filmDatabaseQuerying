@@ -6,14 +6,14 @@ public class Main {
     public static void main(String[] args)
     {
         //===========HEADER==============
-        System.out.println("\n\n\u001B[45m QUESTION 2 \u001B[0m");
+        System.out.println("\n\n QUESTION 2 ");
         //===========HEADER==============
         new Film()
                 .sortBy("duration")
                 .printResult();
 
         //===========HEADER==============
-        System.out.println("\n\n\u001B[45m QUESTION 3 \u001B[0m");
+        System.out.println("\n\n QUESTION 3 ");
         //===========HEADER==============
         new Film()
                 .sortBy("rating")
@@ -22,7 +22,7 @@ public class Main {
                 .printResult();
 
         //===========HEADER==============
-        System.out.println("\n\n\u001B[45m QUESTION 4 \u001B[0m");
+        System.out.println("\n\n QUESTION 4 ");
         //===========HEADER==============
         new Film()
                 .sortBy("duration")
@@ -31,7 +31,7 @@ public class Main {
                 .printResult();
 
         //===========HEADER==============
-        System.out.println("\n\n\u001B[45m QUESTION 5 \u001B[0m");
+        System.out.println("\n\n QUESTION 5 ");
         //===========HEADER==============
         new Film()
                 .sortBy("titleLength")
@@ -39,7 +39,7 @@ public class Main {
                 .printResult();
 
         //===========HEADER==============
-        System.out.println("\n\n\u001B[45m QUESTION 6 \u001B[0m");
+        System.out.println("\n\n QUESTION 6 ");
         //===========HEADER==============
         String oldestFilmYear = new Film()
                 .sortBy("year")

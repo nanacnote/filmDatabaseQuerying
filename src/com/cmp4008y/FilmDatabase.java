@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * This class reads line by line data from the film.txt found in the root folder of this project.
+ * This class reads line by line data from the films.txt found in the root folder of this project.
  *
  * @author [Owusu K](https://github.com/nanacnote)
  */
@@ -17,7 +17,7 @@ public class FilmDatabase {
     public final ArrayList<HashMap<String, String>> filmCollection = new ArrayList<>();
 
     /**
-     * Constructor method which initialises the FilmDatabase class by getting data from the film.txt file
+     * Constructor method which initialises the FilmDatabase class by getting data from the films.txt file
      * and converting the individual film entries into a hashMap which is assigned to the filmCollections attribute.
      */
     public FilmDatabase()
@@ -27,13 +27,13 @@ public class FilmDatabase {
 
 
     /**
-     * Reads in the film.txt file line by line and passes each line to the filmEntryParser() method.
+     * Reads in the films.txt file line by line and passes each line to the filmEntryParser() method.
      */
     private void readFilmFile()
     {
         try
         {
-            File filmFile = new File("film.txt");
+            File filmFile = new File("films.txt");
             Scanner fileReader = new Scanner(filmFile);
             while (fileReader.hasNextLine())
             {
@@ -53,7 +53,7 @@ public class FilmDatabase {
     /**
      * Takes in a string param value and parses it to become a HasMap with standardised key identifiers
      *
-     * @param filmEntry entry of film read in from film.txt (this string contains information on 'title',
+     * @param filmEntry entry of film read in from films.txt (this string contains information on 'title',
      *                  'year of release', 'certificate of audience suitability', 'genre', 'duration' and
      *                  'viewer rating' )
      */
